@@ -1,6 +1,6 @@
 // Importando as dependências necessárias do React e do React Native
 import React, { useState } from 'react';
-import { View, TextInput, Button, Alert, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
+import { View, TextInput, Alert, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
 import Logo from "../../../assets/logo.png"
 
 // Definindo o componente Login como uma função. Ele recebe uma prop chamada onLoginSuccess.
