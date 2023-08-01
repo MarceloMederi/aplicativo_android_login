@@ -1,5 +1,6 @@
 
-# Voya
+# Trip Wise
+
 
 Um aplicativo de roteiro de viagem em família para Maceió. Se trata de um aplicativo privado, com a intenção de deixar a viagem mais interativa e com os dados para todos os integrantes da família.
 
@@ -61,3 +62,13 @@ Instale no seu celular android o Expo Go
 ``` 
 
 Agora é só ler o Qr code do terminal pelo aplicativo que você instalou.
+
+## Imagens
+
+![trip-wise](https://github.com/MarceloMederi/aplicativo_android_login/assets/78119200/8e8d6b0d-6334-4d26-a533-9abb93fd4ab0)
+
+
+
+https://github.com/MarceloMederi/aplicativo_android_login/assets/78119200/6ef7dc70-b86f-4637-8815-4b44196aecfd
+
+
