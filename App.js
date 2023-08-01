@@ -1,6 +1,6 @@
 // Importando as dependências necessárias do React e do React Native
 import React, { useState } from 'react';
-import { View, Button } from 'react-native';
+import { View, StyleSheet, TouchableOpacity,Text } from 'react-native';
 
 // Importando os componentes personalizados Login e Dia
 import Login from './src/components/Login';
@@ -31,14 +31,34 @@ const App = () => {
       {loggedIn && (
         <View style={{ flex: 1 }}>
           <Dia />
-          <View style={{ marginVertical: 20 }}>
-            <Button title="Sair" onPress={handleLogout} />
+          <View style={estilos.container}>
+            <TouchableOpacity style={estilos.botao} onPress={handleLogout}>
+              <Text style={estilos.textoBotao}>Sair</Text>
+            </TouchableOpacity>
           </View>
         </View>
       )}
     </View>
   );
 };
+
+const estilos = StyleSheet.create({
+  container:{
+    
+  },
+  botao:{
+    backgroundColor:"#FFFFFF",
+    borderRadius: 5,
+    padding: 10,
+    
+  },
+  textoBotao:{
+    fontSize: 25,
+    textAlign:"center",
+    color: "#1A4888",
+    fontWeight: "bold",
+  },
+})
 
 // Exporta o componente App para que possa ser utilizado como ponto de entrada da aplicação.
 export default App;

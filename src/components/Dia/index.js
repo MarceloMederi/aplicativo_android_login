@@ -7,7 +7,7 @@ const Dia = () => {
 
   // Array de objetos que contém dias e códigos associados
   const dias = [
-    { dia: 1, codigo: '06/08' },
+    { dia: 1, codigo: '06/08' }, //colocar uma imagem no objeto
     { dia: 2, codigo: '07/08' },
     { dia: 3, codigo: '08/08' },
     { dia: 4, codigo: '09/08' },
@@ -28,13 +28,14 @@ const Dia = () => {
 
   // Retorna a estrutura do componente, a ser renderizada na tela.
   return (
-    <View style={styles.container}>
+    <View style={estilos.container}>
+      <Text style={estilos.titulo}>Selecione o Dia</Text>
       {/* Mapeia o array de dias para renderizar a lista de botões */}
       {dias.map(item => (
         // TouchableOpacity é um botão que fornece feedback visual ao ser pressionado
-        <TouchableOpacity key={item.dia} onPress={() => handleDayPress(item.dia)} style={styles.button}>
+        <TouchableOpacity key={item.dia} onPress={() => handleDayPress(item.dia)} style={estilos.botao}>
           {/* Texto exibindo o número do dia e o código correspondente */}
-          <Text style={styles.buttonText}>Dia {item.dia}: -{item.codigo}</Text>
+          <Text style={estilos.textoBotao}>Dia {item.dia}: -{item.codigo}</Text>
         </TouchableOpacity>
       ))}
     </View>
@@ -42,24 +43,35 @@ const Dia = () => {
 };
 
 // Estilos do componente definidos usando StyleSheet.create
-const styles = StyleSheet.create({
+const estilos = StyleSheet.create({
+  titulo:{
+    fontSize: 35,
+    fontWeight: "bold",
+    color: "#FFFFFF",
+    marginBottom: 40,
+    marginTop: 20,
+  },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor:"#1A4888",
   },
-  button: {
-    backgroundColor: 'white',
-    marginBottom: 10,
-    padding: 10,
+  botao: {
+    backgroundColor: "#F7941E",
+    marginBottom: 25,
+    padding: 20,
+    paddingHorizontal: 70,
     minWidth: 200,
-    alignItems: 'center',
+    alignItems: "center",
     borderRadius: 5,
-    borderWidth: 1,
-    borderColor: 'black',
+    borderWidth: 2,
+    borderColor: "#FFFFFF",
   },
-  buttonText: {
-    color: 'black',
+  textoBotao: {
+    color: "#FFFFFF",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 
