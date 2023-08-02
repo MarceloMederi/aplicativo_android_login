@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, Text, Alert, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
+import Dia1 from "../../../assets/dia_1.png";
+import Dia2 from "../../../assets/dia_2.png";
 
 const Dia = () => {
   const dias = [
-    { dia: 1, codigo: '06/08', detalhes: 'Detalhes do Dia 1' },
-    { dia: 2, codigo: '07/08', detalhes: 'Detalhes do Dia 2' },
+    { dia: 1, codigo: '06/08', detalhes: 'Detalhes do Dia 1', imagem: Dia1 },
+    { dia: 2, codigo: '07/08', detalhes: 'Detalhes do Dia 2', imagem: Dia2 },
     { dia: 3, codigo: '08/08', detalhes: 'Detalhes do Dia 3' },
     { dia: 4, codigo: '09/08', detalhes: 'Detalhes do Dia 4' },
     { dia: 5, codigo: '10/08', detalhes: 'Detalhes do Dia 5' },
@@ -40,10 +42,10 @@ const Dia = () => {
       ) : (
         // Mostra os detalhes do dia selecionado
         <View style={estilos.detalhesContainer}>
-          <Text style={estilos.detalhesTitulo}>Detalhes do Dia {selectedDay}</Text>
-          <Text style={estilos.detalhesTexto}>
-            {dias[selectedDay - 1].detalhes}
-          </Text>
+          
+          
+          <Image source={dias[selectedDay - 1].imagem} style={estilos.imagem} resizeMode='contain'></Image>
+
           <TouchableOpacity
             style={estilos.botaoFecharDetalhes}
             onPress={() => setSelectedDay(null)}
@@ -82,30 +84,32 @@ const estilos = StyleSheet.create({
     borderColor: '#FFFFFF',
   },
   botaoSelecionado: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: "#FFFFFF",
   },
   textoBotao: {
-    color: '#FFFFFF',
+    color: "#FFFFFF",
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   detalhesContainer: {
-    backgroundColor: '#FFFFFF',
-    marginTop: 20,
-    padding: 20,
+    backgroundColor: "#FFFFFF",
     borderRadius: 5,
-    alignItems: 'center',
+    alignItems: "center",
   },
   detalhesTitulo: {
     fontSize: 18,
     color: '#1A4888',
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginBottom: 10,
   },
   detalhesTexto: {
     fontSize: 16,
-    color: '#1A4888',
-    textAlign: 'center',
+    color: "#1A4888",
+    textAlign: "center",
+  },
+  imagem: {
+    height: 650,
+    
   },
   botaoFecharDetalhes: {
     backgroundColor: '#F7941E',
@@ -113,7 +117,7 @@ const estilos = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 5,
     alignSelf: 'flex-end',
-    marginTop: 10,
+    marginTop: 0,
   },
 });
 
