@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 import Dia1 from "../../../assets/dia_1.png";
 import Dia2 from "../../../assets/dia_2.png";
+import Dia3 from "../../../assets/dia_3.png";
+import Dia4 from "../../../assets/dia_4.png";
+import Dia5 from "../../../assets/dia_5.png";
+import Dia6 from "../../../assets/dia_6.png";
+import Dia7 from "../../../assets/dia_7.png";
 
 const Dia = () => {
   const dias = [
     { dia: 1, codigo: '06/08', detalhes: 'Detalhes do Dia 1', imagem: Dia1 },
     { dia: 2, codigo: '07/08', detalhes: 'Detalhes do Dia 2', imagem: Dia2 },
-    { dia: 3, codigo: '08/08', detalhes: 'Detalhes do Dia 3' },
-    { dia: 4, codigo: '09/08', detalhes: 'Detalhes do Dia 4' },
-    { dia: 5, codigo: '10/08', detalhes: 'Detalhes do Dia 5' },
-    { dia: 6, codigo: '11/08', detalhes: 'Detalhes do Dia 6' },
-    { dia: 7, codigo: '12/08', detalhes: 'Detalhes do Dia 7' },
+    { dia: 3, codigo: '08/08', detalhes: 'Detalhes do Dia 3', imagem: Dia3 },
+    { dia: 4, codigo: '09/08', detalhes: 'Detalhes do Dia 4', imagem: Dia4 },
+    { dia: 5, codigo: '10/08', detalhes: 'Detalhes do Dia 5', imagem: Dia5 },
+    { dia: 6, codigo: '11/08', detalhes: 'Detalhes do Dia 6', imagem: Dia6 },
+    { dia: 7, codigo: '12/08', detalhes: 'Detalhes do Dia 7', imagem: Dia7 },
   ];
 
   const [selectedDay, setSelectedDay] = useState(null);
@@ -44,7 +49,7 @@ const Dia = () => {
         <View style={estilos.detalhesContainer}>
           
           
-          <Image source={dias[selectedDay - 1].imagem} style={estilos.imagem} resizeMode='contain'></Image>
+          <Image source={dias[selectedDay - 1].imagem} style={estilos.imagem}></Image>
 
           <TouchableOpacity
             style={estilos.botaoFecharDetalhes}
@@ -94,6 +99,7 @@ const estilos = StyleSheet.create({
   detalhesContainer: {
     backgroundColor: "#FFFFFF",
     borderRadius: 5,
+    padding: 20,
     alignItems: "center",
   },
   detalhesTitulo: {
@@ -108,8 +114,8 @@ const estilos = StyleSheet.create({
     textAlign: "center",
   },
   imagem: {
-    height: 650,
-    
+    height: 600,
+    width: 350, 
   },
   botaoFecharDetalhes: {
     backgroundColor: '#F7941E',
@@ -117,7 +123,7 @@ const estilos = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 5,
     alignSelf: 'flex-end',
-    marginTop: 0,
+    marginTop: 20,
   },
 });
 
