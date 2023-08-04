@@ -13,7 +13,7 @@ const Login = ({ onLoginSuccess }) => {
   // Função chamada quando o botão de login é pressionado.
   const handleLogin = () => {
     // Verificando as credenciais aqui
-    if (username === 'teste' && password === 'teste') {
+    if (username === 'Partiu' && password === 'Viajar') {
       // Se as credenciais são válidas, exibe um alerta indicando o login bem-sucedido.
       Alert.alert('Login bem-sucedido!');
       // Chamando a função onLoginSuccess passada como prop para atualizar o estado loggedIn no App.js
